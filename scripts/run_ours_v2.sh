@@ -1,7 +1,7 @@
 #! /bin/bash
 
 GPU_ID=0
-DATA_ROOT_DIR="enter the data root directory here"
+DATA_ROOT_DIR="$(realpath ./data/benchmark)"
 
 # increase iteration to get better metrics (e.g. gs_train_iter=5000)
 gs_train_iter=30000
