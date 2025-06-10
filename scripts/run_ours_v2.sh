@@ -35,7 +35,7 @@ do
     "
 
     # # ----- (1.1) Optional: generating SAM labels -----
-    CMDSAM="python python dreamdrive/utils/sam.py"
+    CMDSAM="python dreamdrive/utils/sam.py"
 
     # # ----- (2) Train: jointly optimize pose -----
     CMD2="CUDA_VISIBLE_DEVICES=${GPU_ID} python -W ignore dreamdrive/trainer/train_dreamdrive_v2.py \
