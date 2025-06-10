@@ -1,6 +1,6 @@
 # DreamDrive
 
-This is the repo of DreamDrive, a framework for generative 4D scene modeling from street view images
+This is the repo of [DreamDrive](https://pointscoder.github.io/DreamDrive/), a framework for generative 4D scene modeling from street view images
 
 ![Demo Video](docs/everywhere.gif).
 
@@ -150,5 +150,15 @@ https://github.com/NVlabs/InstantSplat \
 https://github.com/cure-lab/MagicDrive \
 https://github.com/OpenDriveLab/Vista
 
+## Citation 
 
+
+```
+@inproceedings{dreamdrive,
+  author = {Mao, Jiageng and Li, Boyi and Ivanovic, Boris and Chen, Yuxiao and Wang, Yan and You, Yurong and Xiao, Chaowei and Xu, Danfei and Pavone, Marco and Wang, Yue},
+  title = {DreamDrive: Generative 4D Scene Modeling from Street View Images},
+  journal = {International Conference on Robotics and Automation},
+  year = {2025},
+}
+```
 
