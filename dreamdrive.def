@@ -27,20 +27,20 @@ From: nvidia/cuda:11.7.1-cudnn8-devel-ubuntu20.04
 
     # Build third-party libraries
     cd submodules/diff-gaussian-rasterization 
-    python setup.py install
+    python3 setup.py install
     cd ../..
 
     cd submodules/dust3r
     mkdir -p checkpoints/
     wget https://download.europe.naverlabs.com/ComputerVision/DUSt3R/DUSt3R_ViTLarge_BaseDecoder_512_dpt.pth -P checkpoints/
-    python setup.py develop
-    cd croco/models/curope && python setup.py build_ext --inplace
+    python3 setup.py develop
+    cd croco/models/curope && python3 setup.py build_ext --inplace
     cd ../..
 
     cd submodules/segment-anything-2
     pip install --no-cache-dir -e .
     cd checkpoints && ./download_ckpts.sh && cd ..
-    python setup.py develop
+    python3 setup.py develop
     cd ../..
 
     cd submodules/simple-knn && pip install --no-cache-dir -e . && cd ../..
@@ -48,16 +48,16 @@ From: nvidia/cuda:11.7.1-cudnn8-devel-ubuntu20.04
     cd submodules/vista
     pip install --no-cache-dir -r requirements.txt
     pip install --no-cache-dir -e git+https://github.com/Stability-AI/datapipelines.git@main#egg=sdata
-    python setup.py develop
+    python3 setup.py develop
     mkdir ckpts
     cd ckpts 
     wget https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/resolve/main/svd_xt.safetensors 
     wget https://huggingface.co/OpenDriveLab/Vista/resolve/main/vista.safetensors
     cd ../..
 
-    python setup.py develop
+    python3 setup.py develop
 
-    python dreamdrive/diffusion/sample.py
+    python3 dreamdrive/diffusion/sample.py
 
 %runscript
     exec scripts/run_ours_v2.sh "$@"
